@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Converter</title>
+	<script type="text/javascript" src="Currencyconverter.js">
+	</script>
+	<style type="text/css">
+	form{
+			border:2px solid #f2f2f2;
+			width:40%;
+			margin:0px auto;
+			margin-top:100px;
+			background-color:#B48F86;
+		}
+
+	.from{
+		margin-top:30px;
+		margin-left:17%;
+		color:#524E4B;
+	}
+
+	.to{
+		margin-top:30px;
+		margin-left:19%;
+		color:#524E4B;
+	}
+
+	input{
+		border:2px solid #f2f2f2;
+	}
+
+	.button{
+		margin-left: 40%;
+		margin-top:30px;
+		background-color:#F92672;
+		color:#3D878E;
+		height: 40px;
+		width:20%;
+		font-size: 25px;
+	}
+
+	.text{
+		background-color:#E6E0EE;
+	}
+
+
+	</style>
+
+</head>
+<body>
+	<form name="f1">
+	<div>
+						<h3 style="text-align:center;">CURRENCY CONVERTER</h3>
+			
+		<div class="from">
+			From:<input class="text" type="text" name="from">
+			<select class="text" name="convertFrom">
+				<option selected="">United States-USD</option>
+				<option>European-EUR</option>
+				<option>British-GBP</option>
+				<option>Nigerian-NGR</option>
+			</select>
+		</div>
+			
+		<div class="to">
+			To: <input class="text" type="text" name="to">
+			<select class="text" name="convertTo">
+				<option>United States-USD</option>
+				<option>European-EUR</option>
+				<option>British-GBP</option>
+				<option selected="">Nigerian-NGR</option>
+			</select>
+		</div>
+	
+			<div><input class="button" type="button" value="Convert" name="" onclick="Convert()"></div>
+	</div>
+			<div style="border-top:2px solid #FFF;margin-top:20px">
+							<h3 align="center" style="position:relative; top:px">WEIGHT CONVERTER</h3>
+
+
+							<div class="from" name="conver">
+									Kilograms: <input class="text" type="number" id="kilogram">
+							</div>
+
+							<div class="to">
+									Grams: <input class="text" type="number" id="gram" >
+							</div>
+
+							<div>
+									<input class="button" type="button" value="Convert" onclick="convert()" style="margin-bottom:20px">
+							</div>
+
+			</div>
+	</form>
+
+</body>
+</html>

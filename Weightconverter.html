@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Converter</title>
+</head>
+<script type="text/javascript">
+
+	function convert()
+	{
+		k = document.getElementById("kilogram").value;
+		g = document.getElementById("gram").value;
+
+		document.getElementById("gram").value = k * 1000;
+		document.getElementById("kilogram").value = g / 1000;
+	}
+
+</script>
+<body>
+		<div name="conver">
+			Kilograms: <input type="number" id="kilogram">
+		</div>
+
+		<div>
+			Grams: <input type="number" id="gram" >
+		</div>
+
+		<div>
+			<input type="button" value="Convert" onclick="convert()">
+		</div>
+</body>
+</html>

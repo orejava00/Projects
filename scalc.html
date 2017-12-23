@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>Simple Caluclator</title>
+<style type="text/css">
+	.on{background-color: red}
+	form{
+	margin: 0px auto;
+	border:3px solid #cdcdcd;
+	width:350px;
+	border-radius: 5px;
+	padding-top:8px;
+	background-color:#D8D7D3;
+	position:relative;
+	font-weight:bold;
+	height: 500px
+}
+#textbox{
+	text-align: right;
+	width:320px;
+	margin-top:10px;
+	margin-bottom: 10px;
+	margin-left: 15px;
+	height: 30px;
+	border:2px solid #FFF;
+	height:50px;
+	font-size:40px;
+	border-radius: 4px
+}
+
+.btn{
+	width:55px;
+	height:60px;
+	border-radius:100px;
+	margin-right:12px;
+	margin-left: 12px;
+	margin-bottom: 10px;
+	border:1px solid #FFF;
+	background-color:#f2f2f2;
+}
+.btn:hover{
+	border:2px solid #FFF
+	background-color:#46e672;
+
+}
+div{margin-left:3%}
+</style>
+	<script>
+	var firstValue = 0;
+	var secondValue = 0;
+	var opressed = '';
+
+		function Power()
+		{
+			var a = document.f1.power.value;
+			if(a=="ON")
+              {
+				 document.f1.power.value="OFF";
+				 document.f1.result.value=0;
+				 				
+		    	}
+			else
+			  {
+      	 document.f1.power.value="ON";
+      	 document.f1.result.value="";
+        	 }
+          }
+		
+	
+		function Button(n)
+		{
+			var p = document.f1.power.value;
+	   			if(p=="ON")
+	       			 {
+		 			document.f1.result.value = "";
+	           		 }
+	           	else{
+							var r = document.f1.result.value;
+							if (r=="0") {
+								document.f1.result.value = n;
+							}
+					   						else{
+	   						  document.f1.result.value+=n;
+	   						}
+	   						  
+           				 }  
+           }
+		
+           function oper(v)
+			{
+				firstValue = parseInt(document.f1.result.value);
+				opressed = v;
+				document.f1.result.value = '';
+			}
+
+	function equal()
+			{
+				secondValue = parseInt(document.f1.result.value);
+				if(opressed == 'plus')
+				{
+					document.f1.result.value = firstValue + secondValue;
+				}
+						else if(opressed == 'minus')
+						{
+							document.f1.result.value = firstValue - secondValue;
+						}
+
+						else if(opressed == 'mult')
+						{
+							document.f1.result.value = firstValue * secondValue;
+						}
+
+						else if(opressed == 'div')
+						{
+							document.f1.result.value = firstValue / secondValue;
+						}
+			}
+		
+		function runclear()
+		{document.f1.result.value = "";
+		
+		}
+		
+		function abc()
+		{
+			document.f1.result.value = document.f1.result.value.slice(0, document.f1.result.value.length-1);
+		}
+		
+
+  </script>
+</head>
+<body>
+	<form name="f1">
+    	
+    	  <input type="text" id="textbox" name="result" >
+   	  </div>
+   	  <div>
+   	  		
+   	  </div>
+      <div>
+    	<input class="btn"  type="button" name="1" value="1" onClick="Button(1)">
+        <input class="btn" type="button" name="2" value="2" onClick="Button(2)">
+        <input class="btn" type="button" name="3" value="3" onClick="Button(3)">
+    	<input class="btn" type="button" name="+" value="+" onClick="oper('plus')">
+       </div>
+        <br>
+        <div>
+        <input class="btn" type="button" name="4" value="4" onClick="Button(4)">
+        <input class="btn" type="button" name="5" value="5" onClick="Button(5)">
+        <input class="btn" type="button" name="6" value="6" onClick="Button(6)">
+    	<input class="btn" type="button" name="-" value="-" onClick="oper('minus')">
+        </div>
+        <br>
+        <div>
+        <input class="btn" type="button" name="7" value="7" onClick="Button(7)">
+        <input class="btn" type="button" name="8" value="8" onClick="Button(8)">
+        <input class="btn" type="button" name="9" value="9" onClick="Button(9)">
+    	<input class="btn" type="button" name="/" value="/" onClick="oper('div')">
+        </div>
+        <br>
+        <div>
+        <input class="btn" type="button" name="0" value="0" onClick="Button(0)">
+        <input class="btn" type="button" name="." value="." onClick="runpoint()">
+        <input class="btn" type="button" name="%" value="%" onClick="runpercent()">
+    	<input class="btn" type="button" name="*" value="*" onClick="oper('mult')">
+        </div>
+        <br>
+        <div>
+        	<input class="btn" type="button" value="C" name="1" onClick="abc()">
+        	<input class="btn" type="button" value="CE" name="1" OnClick="runclear()" >
+            <input class="btn" type="button" value="=" onClick="equal()" >
+         	<input type="button"  class="btn" name="power" onClick="Power()" value="ON" >
+            
+        </div>
+        
+    </form>
+    
+
+
+
+</body>
+</html>

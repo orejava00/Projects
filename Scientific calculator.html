@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Simple Caluclator</title>
+<script type="text/javascript" src="calc.js"></script>
+<link rel="stylesheet" type="text/css" href="Scientific calculator.css">
+</head>
+<body>
+	<form name="f1">
+    <div  id="container">
+    	<div class="screen">
+    	  <input type="textbox" name="result" size="20" maxlength="50">
+   	  </div>
+   	  <div class="btns">
+        <div id="button.black">
+        	<input class="button-black" type="button" name="sin" value="SIN" onClick="runSin()" >
+            <input class="button-black" type="button" name="cos" value="COS" onClick="runCos()">
+            <input class="button-black" type="button" name="Tan" value="TAN" onClick="runTan()">
+        	<input class="button-black" type="button" name="(-)" value="(-)" onClick="runChangeSign(f1.result.value)">
+        	<input class="button-black" type="button" name="abs" value="ABS" onClick="runAbs()">
+        </div>
+    </div>
+    <div  class="btns">
+        <div>
+        	<input class="button-black" type="button" name="sqrt" value="&radic;" onClick="runSqrt()">
+            <input class="button-black" type="button" name="sqr" value="x2" onClick="runSqr()">
+            <input class="button-black" type="button" name="^" value="^" onClick="runPower()">
+        	<input class="button-black" type="button" name="(log)" value="LOG" onClick="runLog()">
+        	<input class="button-black" type="button" name="In" value="In" onClick="runIn()">
+        </div>
+    </div>
+    <div  class="btns">
+        <div>
+        	<input class="button-black" type="button" name="rcl" value="CLR" onClick="runClear()">
+            <input class="button-black" type="button" name="br1" value="(" onClick="runBrac()">
+            <input class="button-black" type="button" name="br2" value=")" onClick="runBrack()">
+        	<input class="button-black" type="button" name="m+" value="M+" onClick="runMplus()">
+        	<input class="button-black" type="button" name="mod" value="MOD" onClick="runModulus()">
+        </div>
+    </div>
+    <div  class="btns">
+    	<input class="button-silver" type="button" name="7" value="7" onClick="button(7)">
+        <input class="button-silver" type="button" name="8" value="8" onClick="button(8)">
+        <input class="button-silver" type="button" name="8" value="9" onClick="button(9)">
+		<input class="button-red" type="button" name="1" value="DEL" onClick="runDelete()">
+		<input class="button-red" type="button" name="power" value="ON" onClick="Power()">
+    </div>
+        <br>
+    <div  class="btns">
+        <input class="button-silver" type="button" name="4" value="4" onClick="button(4)">
+        <input class="button-silver" type="button" name="5" value="5" onClick="button(5)">
+        <input class="button-silver" type="button" name="6" value="6" onClick="button(6)">
+        <input class="button-silver" type="button" name="*" value="*" onClick="runmultiply()">
+        <input class="button-silver" type="button" name="/" value="/" onClick="rundivide()">
+    </div>
+        <br>
+    <div class="btns">
+        <input class="button-silver" type="button" name="1" value="1" onClick="button(1)">
+        <input class="button-silver" type="button" name="2" value="2" onClick="button(2)">
+        <input class="button-silver" type="button" name="3" value="3" onClick="button(3)">
+        <input class="button-silver" type="button" name="+" value="+" onClick="runplus()">
+        <input class="button-silver" type="button" name="-" value="-" onClick="runminus()">
+    </div>
+        <br>
+    <div class="btns">
+        <input class="button-silver" type="button" name="0" value="0" onClick="button(0)">
+        <input class="button-silver" type="button" name="." value="." onClick="runpoint()">
+        <input class="button-silver" type="button" name="exp" value="EXP" onClick="runexpo()">
+        <input class="button-silver" type="button" name="pi" value="Pi" onClick="runpi()">
+        <input class="button-silver" type="button" value="=" onClick="evalop()" >
+    </div>
+    </div>
+ </form>
+</body>
+</html>

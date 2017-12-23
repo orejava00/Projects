@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Simple Caluclator</title>
+<script type="text/javascript" src="calc.js"></script>
+<style type="text/css" src="Scientific calculator.css"></style>
+</head>
+<body>
+	<form name="f1">
+    	<div>
+    	  <input type="textbox" name="result" size="20" maxlength="50">
+   	  </div>
+   	  <div>
+    	<input type="button" name="sin" value="SIN" onClick="runSin()">
+        <input type="button" name="cos" value="COS" onClick="runCos()">
+        <input type="button" name="Tan" value="TAN" onClick="runTan()">
+    	<input type="button" name="(-)" value="(-)" onClick="runChangeSign(f1.result.value)">
+    	<input type="button" name="abs" value="ABS" onClick="runAbs()">
+        </div>
+        <div>
+    	<input type="button" name="sqrt" value="&radic;" onClick="runSqrt()">
+        <input type="button" name="sqr" value="x2" onClick="runSqr()">
+        <input type="button" name="^" value="^" onClick="runPower()">
+    	<input type="button" name="(log)" value="LOG" onClick="runLog()">
+    	<input type="button" name="In" value="In" onClick="runIn()">
+        </div>
+        <div>
+    	<input type="button" name="rcl" value="CLR" onClick="runClear()">
+        <input type="button" name="br1" value="(" onClick="runBrac()">
+        <input type="button" name="br2" value=")" onClick="runBrack()">
+    	<input type="button" name="m+" value="M+" onClick="runMplus()">
+    	<input type="button" name="mod" value="MOD" onClick="runModulus()">
+        </div>
+      <div>
+    	<input type="button" name="7" value="7" onClick="button(7)">
+        <input type="button" name="8" value="8" onClick="button(8)">
+        <input type="button" name="8" value="9" onClick="button(9)">
+		<input type="button" name="1" value="DEL" onClick="runDelete()">
+		<input type="button" name="ext" value="EXIT" onClick="">
+        </div>
+        <br>
+        <div>
+        <input type="button" name="4" value="4" onClick="button(4)">
+        <input type="button" name="5" value="5" onClick="button(5)">
+        <input type="button" name="6" value="6" onClick="button(6)">
+        <input type="button" name="*" value="*" onClick="runmultiply()">
+        <input type="button" name="/" value="/" onClick="rundivide()">
+        </div>
+        <br>
+        <div>
+        <input type="button" name="1" value="1" onClick="button(1)">
+        <input type="button" name="2" value="2" onClick="button(2)">
+        <input type="button" name="3" value="3" onClick="button(3)">
+        <input type="button" name="+" value="+" onClick="runplus()">
+        <input type="button" name="-" value="-" onClick="runminus()">
+    	
+        </div>
+        <br>
+        <div>
+        <input type="button" name="0" value="0" onClick="button(0)">
+        <input type="button" name="." value="." onClick="runpoint()">
+        <input type="button" name="exp" value="EXP" onClick="runexpo()">
+        <input type="button" name="pi" value="Pi" onClick="runpi()">
+        <input type="button" value="=" onClick="evalop()" >
+    	
+        </div>
+        
+ </form>
+</body>
+</html>

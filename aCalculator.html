@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<script type="text/javascript">
+	function mult()
+			{
+				var a = document.getElementById("v1").value;
+				var b = document.getElementById("v2").value;
+				var s = parseInt(document.getElementById("screen").value);
+				document.getElementById("screen").value = a * b;
+			}
+	function minus()
+			{
+				var a = document.getElementById("v1").value;
+				var b = document.getElementById("v2").value;
+				var s = document.getElementById("screen").value;
+				document.getElementById("screen").value = a - b;
+			}
+	function add()
+			{
+				var a = document.getElementById("v1").value;
+				var b = document.getElementById("v2").value;
+				var s = document.getElementById("screen").value;
+				document.getElementById("screen").value += a + b;
+			}
+	function divide()
+			{
+				var a = document.getElementById("v1").value;
+				var b = document.getElementById("v2").value;
+				var s = document.getElementById("screen").value;
+				document.getElementById("screen").value = a / b;
+			}
+</script>
+<body>
+		<div>Value: <input type="text" id="v1"></div>
+		<div>Value: <input type="text" id="v2"></div>
+		<div>Result: <input type="text" id="screen"></div>
+		<input type="button" value="*" onclick="mult()">
+		<input type="button" value="-" onclick="minus()">
+		<input type="button" value="+" onclick="add()">
+		<input type="button" value="/" onclick="divide()">
+
+</body>
+</html>

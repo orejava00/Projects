@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript</title>
+	<script type="text/javascript">
+		function tellhim(h)
+		{
+			alert("You have clicked "+h);
+		}
+		function cal()
+		{
+			u = parseInt(f1.t1.value)
+			v = parseInt(f1.t2.value)
+			result=u*v
+			alert("the result of your calculation is "+result)
+		}
+	</script>
+</head>
+<body>
+<form name="f1">
+		<table width="50%" border="2" align="center">
+			<tr>
+				<td><input type="text" name="t1"></td>
+				<td><input type="text" name="t2"></td>
+			</tr>
+
+				<tr>
+					<td colspan="2" align="center"><input type="button" value="calculate" onclick="cal()"></td>
+				</tr>
+		</table>
+	</form>
+</body>
+</html>
